@@ -1,0 +1,25 @@
+* GREATER THAN AND SORT
+db.getCollection('fiiputschemas').find( { netPosition: { $gte: 200000 } } ).sort( { createdAt: -1 } )
+
+* COUNT DOCUMENTS
+db.getCollection('derivatives').countDocuments({TIMESTAMP: "25-MAR-2021"})
+
+* COUNT DOCUMENTS
+db.getCollection('derivatives').countDocuments({TIMESTAMP: "25-MAR-2021"})
+
+* DELETE ONE
+db.getCollection('bankniftyoptionchains').deleteOne({ "stringTimestamp" : "16-Apr-2021 15:30:00" })
+
+* FIND ONE
+db.getCollection('bankniftyoptionchains').findOne({ "stringTimestamp" : "16-Apr-2021 15:30:00" })
+
+* DELETE MANY
+db.getCollection('derivatives').deleteMany({TIMESTAMP: "30-APR-2021"})
+db.getCollection('pcrs').deleteMany({TIMESTAMP: "30-APR-2021"})
+
+* SORT
+db.getCollection('derivatives').find({}).sort( { TIMESTAMP: -1 } )
+db.getCollection('derivatives').find({}).sort( { CREATED_AT: -1 } )
+
+* GET LAST INSERTED NIFTY RECORD
+db.getCollection('derivatives').find({ SYMBOL: "NIFTY"}).sort( { CREATED_AT: -1 } )

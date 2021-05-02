@@ -1,0 +1,38 @@
+{
+  "name": "fno-stock-derivative-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node bin/dev",
+    "build": "rm -rf dist && mkdir dist && babel src -s -d dist",
+    "start": "nodemon --exec babel-node src/index.js",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "axios": "0.19.2",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "extract-zip": "2.0.1",
+    "lodash": "4.17.19",
+    "moment": "2.27.0",
+    "mongoose": "5.9.16",
+    "morgan": "1.10.0",
+    "node-fetch": "2.6.0",
+    "nodemon": "2.0.4",
+    "papaparse": "5.2.0",
+    "request": "2.88.2",
+    "scramjet": "4.33.4",
+    "technicalindicators": "3.1.0",
+    "xmlhttprequest": "1.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/node": "7.12.10",
+    "@babel/preset-env": "7.12.11"
+  }
+}

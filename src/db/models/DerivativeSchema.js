@@ -1,0 +1,60 @@
+// "SYMBOL": "BANKNIFTY",
+// "OPTION_EXPIRY_DT": "18-Feb-2021",
+// "CALL_OPEN_INT": 456472,
+// "PUT_OPEN_INT": 426503,
+// "CALL_CHG_IN_OI": 181044,
+// "PUT_CHG_IN_OI": -45271,
+// "PCR": 0.9343464659387651,
+// "INSTRUMENT": "FUTIDX",
+// "EXPIRY_DT": "25-Feb-2021",
+// "STRIKE_PR": "0",
+// "OPTION_TYP": "XX",
+// "OPEN": 37550,
+// "HIGH": 37770,
+// "LOW": 36832.6,
+// "CLOSE": 37218.15,
+// "SETTLE_PR": "37218.15",
+// "CONTRACTS": "258697",
+// "VAL_INLAKH": "2410277.09",
+// "OPEN_INT": 77371,
+// "CHG_IN_OI": -11108,
+// "TIMESTAMP": "16-FEB-2021",
+
+import mongoose from "mongoose";
+
+const Schema = mongoose.Schema;
+
+// FILE
+const DerivativeSchema = new Schema({
+  SYMBOL: { type: String, required: false },
+  OPTION_EXPIRY_DT: { type: String, required: false },
+  CALL_OPEN_INT: { type: Number, required: false },
+  PUT_OPEN_INT: { type: Number, required: false },
+  CALL_CHG_IN_OI: { type: Number, required: false },
+  PUT_CHG_IN_OI: { type: Number, required: false },
+  PCR: { type: Number, required: false },
+  INSTRUMENT: { type: String, required: false },
+  EXPIRY_DT: { type: String, required: false },
+  STRIKE_PR: { type: String, required: false },
+  OPTION_TYP: { type: String, required: false },
+  OPEN: { type: Number, required: false },
+  HIGH: { type: Number, required: false },
+  LOW: { type: Number, required: false },
+  CLOSE: { type: Number, required: false },
+  SETTLE_PR: { type: String, required: false },
+  CONTRACTS: { type: String, required: false },
+  VAL_INLAKH: { type: String, required: false },
+  OPEN_INT: { type: Number, required: false },
+  CHG_IN_OI: { type: Number, required: false },
+  TIMESTAMP: { type: String, required: false },
+  CHG_IN_OI_PER: { type: Number, required: false, default: 0 },
+  CALL_CHG_IN_OI_PER: { type: Number, required: false, default: 0 },
+  PUT_CHG_IN_OI_PER: { type: Number, required: false, default: 0 },
+  CLOSE_PER: { type: Number, required: false, default: 0 },
+  DIFF_PUT_CALL: { type: Number, required: false, default: 0 },
+  DAY_PRICE_CHG: { type: Number, required: false, default: 0 },
+  CREATED_AT: { type: Date, required: false, default: new Date() },
+});
+
+const DerivativeModel = mongoose.model("Derivative", DerivativeSchema);
+export default DerivativeModel;
